@@ -8,14 +8,22 @@ Oppgaven er levert av følgende studenter:
 # Arbeidsfordeling
 
 I oppgaven har vi hatt følgende arbeidsfordeling:
-* Per har hatt hovedansvar for oppgave 1, 3, og 5. 
-* Else har hatt hovedansvar for oppgave 2, 4, og 6. 
-* Fatima har hatt hovedansvar for oppgave 7 og 8. 
-* Vi har i fellesskap løst oppgave 10. 
+* Hamzeh har hatt hovedansvar for oppgave 1, 3, og 7. 
+* Eva har hatt hovedansvar for oppgave 8 og 9. 
+* Maja har hatt hovedansvar for oppgave 5 og 6. 
+* Hitomi har hatt hovedansvar for oppgave 2,4 og 10. 
 
 Her er Obligen våre nr1.
 Gruppen være er:
+
 Hamzeh Saleem Alsheikho
-Student nr: 339572
+Student nr: s339572
+
 Eva Nashi
-Student nr: 898899
+Student nr: s898899
+
+Maja Åskov Tengstedt
+Studnet nr. s196074
+
+Hitomi Schiefloe
+Student nr. s344214

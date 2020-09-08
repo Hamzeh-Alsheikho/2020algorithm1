@@ -9,19 +9,7 @@ import java.util.NoSuchElementException;
 
 public class Oblig1 {
     public static void main(String[] args) {
-       /* int[]a ={8,4,17,10,6,20,1,11,15,3,18,9,2,7,19};
-        int verdi = maks(a);
-        System.out.println("Det største tallet i tabllen er: "+ verdi);
-        ombyttinger(a);
-        antallUlikeUsortert(a);
-        System.out.println("Antall forskjellige elmenter er: "+antallUlikeUsortert(a));
-        String s  =flett("ABC","DEFGH");
-        String t  = flett ("IJKLMN","OPQ");
-        flett(s,t);
-        System.out.println(flett(s,t));
-        String s = flett("AM ","L","GEDS","ORATKRR","","R TRTE","IO","TGAUU");
-        System.out.println(flett(s));
-        */
+
     }
     private Oblig1() {}
 
