@@ -23,7 +23,7 @@ Eva Nashi
 Student nr: s898899
 
 Maja Åskov Tengstedt
-Studnet nr. s196074
+Student nr. s196074
 
 Hitomi Schiefloe
 Student nr. s344214
