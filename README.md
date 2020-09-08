@@ -13,3 +13,9 @@ I oppgaven har vi hatt følgende arbeidsfordeling:
 * Fatima har hatt hovedansvar for oppgave 7 og 8. 
 * Vi har i fellesskap løst oppgave 10. 
 
+Her er Obligen våre nr1.
+Gruppen være er:
+Hamzeh Saleem Alsheikho
+Student nr: 339572
+Eva Nashi
+Student nr: 898899
