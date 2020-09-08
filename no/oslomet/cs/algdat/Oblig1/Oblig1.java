@@ -385,7 +385,7 @@ public class Oblig1 {
         return elementer;
 
     }*/
-    //Femte versjon
+        //Femte versjon
         /*  int[] indeks1 = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
         int[] elementer = new int[a.length];
         int[] acopy = Arrays.copyOf(a, a.length);
@@ -433,8 +433,10 @@ public class Oblig1 {
         }
 
         return m;  // posisjonen til største verdi i a[fra:til>
+
+}
+*/
     }
-}*/
 
 
     ///// Oppgave 9 //////////////////////////////////////
