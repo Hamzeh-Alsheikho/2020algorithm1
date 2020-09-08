@@ -140,12 +140,359 @@ public class Oblig1 {
 
     ///// Oppgave 8 //////////////////////////////////////
     public static int[] indekssortering(int[] a) {
+
         throw new UnsupportedOperationException();
+        //Firste versjon
+        /* int[] indeks = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        int[] elementer = new int[a.length];
+        int min = a[indeks[0]];
+        int ind = 0;
+        int i;
+        for (i = 1; i < a.length - 1; ++i) {
+            //     ind = indeks[i];
+            if (min > a[indeks[i]]) {
+
+                min = a[indeks[i]];
+
+                System.out.print(a[indeks[i]] + " ");
+
+            }
+
+
+             System.out.print(min+ " ");
+
+        }
+
+
+        return elementer;
+
+
+    }*/
+
+        //andre versjon
+    /*    public static int[] tredjeMin(int[]a) {
+
+
+            int n = a.length;     // tabellens lengde
+
+            if (n < 10)     // må ha minst tre verdier
+            {
+                throw new IllegalArgumentException("Lengden til tabellen(" + n + ") er < 10!");
+            }
+
+            int m = 0;     // m er posisjonen til minst verdi
+            int nm = 1;    // nm er posisjonen til nest minst verdi
+            int tm = 2;    // tm er posisjonen til tredje minst verdi
+            int fjerde = 3;
+            int femte = 4;
+            int sjette = 5;
+            int syvende = 6;
+            int ottende = 7;
+            int niende = 8;
+            int tiende = 9;
+
+            // vi bytter om slik at når vi starter er m posisjonen til
+            // den minste av de tre første, nm er posisjonen til den nest
+            // minste og tm posisjonen til den tredje minste av de tre første
+
+            if (a[nm] > a[m]) {
+                m = 0;
+                nm = 1;
+            }
+
+            if (a[tm] < a[m])   //hvis tredje minst er mindre en minst
+            {
+                int temp = tm;  //legger verdien til tredjeminst over temporary variabel
+                tm = m;         //tredje minst flytes til minst plassen
+                m = temp;        // minst blir temporary
+            }
+
+            if (a[tm] < a[nm])  //hvis tredje minst er mindre enn nest minst
+            {
+                int temp = tm;   //tredje minst legges over til temp
+                tm = nm;         // så tredjeminst tar plassen til nest minst
+                nm = temp;
+            }
+            if (a[fjerde] < a[tm]) {
+                int temp = fjerde;
+                fjerde = temp;
+            }
+            if (a[femte] < a[fjerde]) {
+                int temp = femte;
+                femte = temp;
+            }
+
+
+            int minverdi = a[m];                // minste verdi
+            int nestminverdi = a[nm];           // nest minste verdi
+            int tredjeminverdi = a[tm];         // tredje minste verdi
+            int fjerdeminverdi = a[fjerde];
+            int femteminverdi = a[femte];
+            for (int i = 3; i < n; i++) {
+                int verdi = a[i];
+                if (verdi < fjerdeminverdi) {
+
+                    if (verdi < tredjeminverdi) {
+                        if (verdi < nestminverdi) {
+                            if (verdi < minverdi) {
+
+                                fjerde = tm;
+                                fjerdeminverdi = tredjeminverdi;
+
+                                tm = nm;
+                                tredjeminverdi = nestminverdi;
+
+                                nm = m;
+                                nestminverdi = minverdi;
+
+                                m = i;
+                                minverdi = verdi;
+                            } else  // verdi <= minverdi && verdi > nestminverdi
+                            {
+                                fjerde=tm;
+                                fjerdeminverdi=tredjeminverdi;
+
+                                tm = nm;
+                                tredjeminverdi = nestminverdi;
+
+                                nm = i;
+                                nestminverdi = verdi;
+                            }
+                        } else // verdi <= nestmaksverdi && verdi > tredjemaksverdi
+
+                        {
+                            tm = i;
+                            tredjeminverdi = verdi;
+                            fjerde=i;
+                            femteminverdi= verdi;
+                        }
+                        {
+
+                        }
+                    }
+                }
+            } // for
+
+            return new int[]{m, nm, tm, fjerde};
+
+        }
+
     }
+
+}*/
+        //Tredje versjon
+
+        /*private int[] indekssortering(int[] a) {
+        public static int maks(int[] a, int fra, int til)
+        {
+            if (fra < 0 || til > a.length || fra >= til)
+            {
+                throw new IllegalArgumentException("Illegalt intervall!");
+            }
+
+            int m = fra;              // indeks til største verdi i a[fra:til>
+            int maksverdi = a[fra];   // største verdi i a[fra:til>
+
+            for (int i = fra + 1; i < til; i++)
+            {
+                if (a[i] > maksverdi)
+                {
+                    m = i;                // indeks til største verdi oppdateres
+                    maksverdi = a[m];     // største verdi oppdateres
+                }
+            }
+
+            return m;  // posisjonen til største verdi i a[fra:til>
+            public static int[] nestMaks(int[] a)  // legges i class Tabell
+            {
+                int n = a.length;   // tabellens lengde
+
+                if (n < 2) throw   // må ha minst to verdier!
+                        new java.util.NoSuchElementException("a.length(" + n + ") < 2!");
+
+                int m = maks(a);  // m er posisjonen til tabellens største verdi
+
+                int nm;           // nm skal inneholde posisjonen til nest største verdi
+
+                if (m == 0)                            // den største ligger først
+                {
+                    nm = maks(a, 1, n);                  // leter i a[1:n>
+                }
+                else if (m == n - 1)                   // den største ligger bakerst
+                {
+                    nm = maks(a, 0, n - 1);              // leter i a[0:n-1>
+                }
+                else
+                {
+                    int mv = maks(a, 0, m);              // leter i a[0:m>
+                    int mh = maks(a, m + 1, n);          // leter i a[m+1:n>
+                    nm = a[mh] > a[mv] ? mh : mv;        // hvem er størst?
+                }
+
+                return new int[] {m,nm};      // m i posisjon 0 , nm i posisjon 1
+
+            } // nestMaks
+
+    }*/
+        //Fjerde versjon
+        /*  int[] indeks1 = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        int[] elementer = new int[a.length];
+        int[] acopy = Arrays.copyOf(a, a.length);
+        int min = a[indeks1[0]];
+        int ind = 0;
+        int i;
+
+        for (i = 1; i < a.length - 1; ++i) {
+         ind = indeks1[i];
+         for(int j = 0; j < indeks1.length; j++) {
+            if (min > a[indeks1[j]]) {
+
+                min = a[indeks1[j]];
+
+                System.out.print(a[indeks1[i]] + " ");
+            }
+
+            System.out.print(min + " ");
+
+        }
+
+        return elementer;
+
+    }*/
+    //Femte versjon
+        /*  int[] indeks1 = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        int[] elementer = new int[a.length];
+        int[] acopy = Arrays.copyOf(a, a.length);
+        int min = a[indeks1[0]];
+        int ind = 0;
+        int i;
+
+        for (i = 1; i < a.length - 1; ++i) {
+         ind = indeks1[i];
+         for(int j = 0; j < indeks1.length; j++) {
+            if (min > a[indeks1[j]]) {
+
+                min = a[indeks1[j]];
+
+                System.out.print(a[indeks1[i]] + " ");
+            }
+
+            System.out.print(min + " ");
+
+        }
+
+        return elementer;
+
+    }*/
+        //Sjette versjon
+        /*public static int maks(int[] a, int[] indeks,int begin, int end)
+    {
+
+        if (begin < 0 || end > a.length || begin >= end)
+
+        {
+            throw new IllegalArgumentException("Illegalt intervall!");
+        }
+
+        int m = begin;              // indeks til største verdi i a[fra:til>
+        int maksverdi = a[begin];   // største verdi i a[fra:til>
+
+        for (int i = begin + 1; i < end; i++)
+        {
+            if (a[indeks[i]] > maksverdi)
+            {
+                m = i;                // indeks til største verdi oppdateres
+                maksverdi = a[indeks[m]];     // største verdi oppdateres
+            }
+        }
+
+        return m;  // posisjonen til største verdi i a[fra:til>
+    }
+}*/
+
 
     ///// Oppgave 9 //////////////////////////////////////
     public static int[] tredjeMin(int[] a) {
-        throw new UnsupportedOperationException();
+       // throw new UnsupportedOperationException();
+
+        int n = a.length;     // tabellens lengde
+
+        if (n < 3)     // må ha minst tre verdier
+        {
+            throw new IllegalArgumentException("Lengden til tabellen(" + n + ") er < 3!");
+        }
+
+        int m = 0;     // m er posisjonen til minst verdi
+        int nm = 1;    // nm er posisjonen til nest minst verdi
+        int tm = 2;    // tm er posisjonen til tredje minst verdi
+
+        // vi bytter om slik at når vi starter er m posisjonen til
+        // den minste av de tre første, nm er posisjonen til den nest
+        // minste og tm posisjonen til den tredje minste av de tre første
+
+        if (a[nm] > a[m])
+        {
+            m = 0;
+            nm = 1;
+        }
+
+        if (a[tm] < a[m])   //hvis tredje minst er mindre en minst
+        {
+            int temp = tm;  //legger verdien til tredjeminst over temporary variabel
+            tm = m;         //tredje minst flytes til minst plassen
+            m = temp;        // minst blir temporary
+        }
+
+        if (a[tm] < a[nm])  //hvis tredje minst er mindre enn nest minst
+        {
+            int temp = tm;   //tredje minst legges over til temp
+            tm = nm;         // så tredjeminst tar plassen til nest minst
+            nm = temp;
+        }
+
+        int minverdi = a[m];                // minste verdi
+        int nestminverdi = a[nm];           // nest minste verdi
+        int tredjeminverdi = a[tm];         // tredje minste verdi
+
+        for (int i = 3; i < n; i++)
+        {
+            int verdi = a[i];
+
+            if (verdi < tredjeminverdi)
+            {
+                if (verdi < nestminverdi)
+                {
+                    if (verdi < minverdi)
+                    {
+                        tm = nm;
+                        tredjeminverdi = nestminverdi;
+
+                        nm = m;
+                        nestminverdi = minverdi;
+
+                        m = i;
+                        minverdi = verdi;
+                    }
+                    else  // verdi <= minverdi && verdi > nestminverdi
+                    {
+                        tm = nm;
+                        tredjeminverdi = nestminverdi;
+
+                        nm = i;
+                        nestminverdi = verdi;
+                    }
+                }
+                else // verdi >= nestminverdi && verdi < tredjeminverdi
+                {
+                    tm = i;
+                    tredjeminverdi = verdi;
+                }
+            }
+
+        }
+
+        return new int[]{m, nm, tm};
+
     }
 
     ///// Oppgave 10 //////////////////////////////////////
