@@ -89,11 +89,37 @@ public class Oblig1 {
 
     ///// Oppgave 5 //////////////////////////////////////
     public static void rotasjon(char[] a) {
-
+//throw new UnsupportedOperationException();
+        rotasjon1(a,1);
+    }
+        public static void rotasjon1(char[] a, int d) {
+//throw new UnsupportedOperationException();
+            int n = a.length;
+            if (n < 2) return;
+            if ((d %= n) < 0) d += n;
+            char[] b = Arrays.copyOfRange(a, n - d, n);
+            for (int i = n - 1; i >= d; i--)
+                a[i] = a[i - d];
+            System.arraycopy(b, 0, a, 0, d);
     }
     ///// Oppgave 6 //////////////////////////////////////
     public static void rotasjon(char[] a, int k) {
-
+        int n = a.length;
+        if (n < 2) return;
+        if ((k %= n) < 0) k += n;
+        int s = gcd(n, k);
+        for (int l = 0; l < s; l++) {
+            char verdi = a[l];
+            for (int i = l - k, j = l; i != l; i -= k) {
+                if (i < 0) i += n;
+                a[j] = a[i];
+                j = i;
+            }
+            a[l + k] = verdi;
+        }
+    }
+    public static int gcd(int a, int b) {
+        return b == 0 ? a : gcd(b, a % b);
     }
 
     ///// Oppgave 7 //////////////////////////////////////
