@@ -31,9 +31,13 @@ a) Skal ikke kaste unntak for to tomme tegnstrenger!!
 - Jeg prøvede å kommente ut throw exception, but fungerer ikke likevel.
 
 Oppgave 8
-Prøvde mange løsninger men ingen fungerte.
-De er alle sammen ufullstendige og kommentert bort. Det jobbes fortsatt med den.
-
+Prøvde mange løsninger men ingen fungerte.Noen av forsøkene er 
+lagt i oppgaven men kommentert bort. Det jobbes fortsatt med oppgaven.
+Tanken for å løse det er blant annet, å finne minimum verdi i array a, og 
+legge dens indeks i et nytt array b i posisjon 0. Så loope gjennom interval 
+[0-Min) og (Min-a.lengde] av a for å finne neste minimum verdi og legge det i det b[1],
+og fortsette på samme måte til man har funnet alle minimum verier i a og lagt 
+alle indekser i array b som til slutt returneres av metoden indekssortering.
 Oppgave 9
 Den ble delvis løst, koden er kjørbar men er ikke fullstendig 
 fordi oppgaven er avhengig av oppgave 8 som ikke er løst ennå. 
