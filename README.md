@@ -1,10 +1,3 @@
-# Obligatorisk oppgave 1 i Algoritmer og Datastrukturer
-
-Denne oppgaven er en innlevering i Algoritmer og Datastrukturer. 
-Oppgaven er levert av følgende studenter:
-* Navn Navnesen, S123456, s123456@oslomet.no
-* ...
-
 # Arbeidsfordeling
 
 I oppgaven har vi hatt følgende arbeidsfordeling:
@@ -14,8 +7,7 @@ I oppgaven har vi hatt følgende arbeidsfordeling:
 * Hitomi har hatt hovedansvar for oppgave 2,4 og 10. 
 
 
-Her er Obligen våre nr1.
-Gruppen være er:
+Her er Obligen våre nr1. Gruppen være er:
 
 Hamzeh Saleem Alsheikho
 Student nr: s339572
@@ -25,8 +17,6 @@ Student nr: s898899
 
 Maja Åskov Tengstedt
 Student nr. s196074
-Oppgave 5, 6
-test-programmet fungerer.
 
 Hitomi Schiefloe
 Student nr. s344214
@@ -35,8 +25,10 @@ Student nr. s344214
 #Resultatet av kjøring av testprogrammet
 Oppgave 1, 2, 3, 4, 5, 6 (Det fungerer)
 
-Oppgave 7
-
+Oppgave 7 del B fungerer, men del A var ikke helt perfect.
+Feilmeldingen er:
+a) Skal ikke kaste unntak for to tomme tegnstrenger!!
+- Jeg prøvede å kommente ut throw exception, but fungerer ikke likevel.
 
 Oppgave 8
 
