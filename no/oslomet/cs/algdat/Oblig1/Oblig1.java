@@ -9,7 +9,6 @@ import java.util.NoSuchElementException;
 
 public class Oblig1 {
     public static void main(String[] args) {
-
     }
 
     private Oblig1() {
@@ -77,22 +76,34 @@ public class Oblig1 {
 
     ///// Oppgave 3 //////////////////////////////////////
     public static int antallUlikeUsortert(int[] a) {
-        // if (a.length <= 0)
-        //  throw new IllegalArgumentException("Antall forskjellige elmenter er: 0");
-        int forskjellig = 1;
-        for (int i = 0; i < a.length - 1; i++) {
-            int left = a[i];
-            int right = a[i + 1];
-            if (left > right) {
-                a[i + 1] = left;
-                a[i] = right;
+        int forskjell = 1;
+        if (a.length == 0)
+            return 0;
+        if (a.length == 1)
+            return forskjell;
+        if (a[0] == a[1])
+            return forskjell;
+        int duplicate = 0;
+        int totall = a.length;
+        int count = 1;
+        if (a[0] > a[1]) {
+            for (int i = 0; i < a.length; i++) {
+                for (int j = i + 1; j < a.length; j++) {
+                    if (a[i] == a[j]){
+                        duplicate++;
+                        break;
+                    }
+                }
             }
-            if (a[i] != a[i + 1])
-                forskjellig++;
+            return totall - duplicate;
+        } else{
+            for (int t = 0; t < a.length -1; t++) {
+                if (a[t] != a[t + 1])
+                    count++;
+            }
         }
-        return forskjellig;
+        return count;
     }
-
     ///// Oppgave 4 //////////////////////////////////////
     public static void delsortering(int[] a) {
 
