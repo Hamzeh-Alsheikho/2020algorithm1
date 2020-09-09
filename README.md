@@ -31,10 +31,12 @@ a) Skal ikke kaste unntak for to tomme tegnstrenger!!
 - Jeg prøvede å kommente ut throw exception, but fungerer ikke likevel.
 
 Oppgave 8
-
+Prøvde mange løsninger men ingen fungerte.
+De er alle sammen ufullstendige og kommentert bort. Det jobbes fortsatt med den.
 
 Oppgave 9
-
+Den ble delvis løst, koden er kjørbar men er ikke fullstendig 
+fordi oppgaven er avhengig av oppgave 8 som ikke er løst ennå. 
 
 Oppgave 10
 --Fail--

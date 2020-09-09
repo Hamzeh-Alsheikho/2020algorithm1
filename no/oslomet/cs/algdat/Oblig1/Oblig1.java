@@ -376,6 +376,7 @@ public class Oblig1 {
 
     ///// Oppgave 8 //////////////////////////////////////
     public static int[] indekssortering(int[] a) {
+        
 
         throw new UnsupportedOperationException();
         //Firste versjon
@@ -539,7 +540,7 @@ public class Oblig1 {
             }
 
             return m;  // posisjonen til største verdi i a[fra:til>
-            public static int[] nestMaks(int[] a)  // legges i class Tabell
+            public static int[] nestMaks(int[] a)
             {
                 int n = a.length;   // tabellens lengde
 
@@ -567,7 +568,7 @@ public class Oblig1 {
 
                 return new int[] {m,nm};      // m i posisjon 0 , nm i posisjon 1
 
-            } // nestMaks
+            }
 
     }*/
         //Fjerde versjon
