@@ -746,20 +746,20 @@ public class Oblig1 {
         if (a.length() >= 1 && b.length() == 0) return false;
         if (a.length() == 0 && b.length() >= 1) return true;
 
-        int[] aArray = new int[127];
-        int[] bArray = new int[127];
+        int[] aArray = new int[256];
+        int[] bArray = new int[256];
 
         for (int i = 0; i < a.length(); i++) {
             char chA = a.charAt(i);
             int chIndexA = (int) chA - 'A';
-            if (chIndexA >= 0 && chIndexA < 126)
+            if (chIndexA >= 0 && chIndexA < 256)
                 aArray[chIndexA]++;
         }
 
         for (int j = 0; j < b.length(); j++) {
             char chB = b.charAt(j);
             int chIndexB = (int) chB - 'A';
-            if (chIndexB >= 0 && chIndexB < 126)
+            if (chIndexB >= 0 && chIndexB < 256)
                 bArray[chIndexB]++;
         }
 
