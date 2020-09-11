@@ -335,10 +335,10 @@ public class Oblig1 {
     ///// Oppgave 7 //////////////////////////////////////
     /// 7a)
     public static String flett(String s, String t) {
-        if (s.equals("")|| t.equals("")){
+       // if (s.equals("")|| t.equals("")){
 
-            throw new UnsupportedOperationException("Tabellen er tom");
-        }
+        //    throw new UnsupportedOperationException("Tabellen er tom");
+       // }
 
         int k = Math.min(s.length(), t.length());
         StringBuilder str = new StringBuilder();
@@ -353,10 +353,12 @@ public class Oblig1 {
 
     /// 7b)
     public static String flett(String... s) {
-        if (s.equals("")) {
-            throw new UnsupportedOperationException("Tablen er tom");
+       // if (s.equals(" ")) {
+         //   throw new UnsupportedOperationException("Tablen er tom");
+      // }
+        if(s.length == 0){
+            return "";
         }
-
         int maks = s[0].length();
         for (int i = 1; i < s.length; i++) {
             if (s.length > maks) {
@@ -364,10 +366,10 @@ public class Oblig1 {
             }
         }
         StringBuilder str = new StringBuilder();
-        for (int i = 0; i < maks; i++) {
-            for (String a : s) {
-                if (a.length() > i) {
-                    str.append(a.charAt(i));
+        for (int i = 0; i <= maks+1; i++) {
+            for (String b : s) {
+                if (b.length() > i) {
+                    str.append(b.charAt(i));
                 }
             }
         }
