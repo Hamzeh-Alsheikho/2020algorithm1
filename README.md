@@ -1,10 +1,3 @@
-# Obligatorisk oppgave 1 i Algoritmer og Datastrukturer
-
-Denne oppgaven er en innlevering i Algoritmer og Datastrukturer. 
-Oppgaven er levert av følgende studenter:
-* Navn Navnesen, S123456, s123456@oslomet.no
-* ...
-
 # Arbeidsfordeling
 
 I oppgaven har vi hatt følgende arbeidsfordeling:
@@ -14,8 +7,7 @@ I oppgaven har vi hatt følgende arbeidsfordeling:
 * Hitomi har hatt hovedansvar for oppgave 2,4 og 10. 
 
 
-Her er Obligen våre nr1.
-Gruppen være er:
+Her er Obligen våre nr1. Gruppen være er:
 
 Hamzeh Saleem Alsheikho
 Student nr: s339572
@@ -25,8 +17,6 @@ Student nr: s898899
 
 Maja Åskov Tengstedt
 Student nr. s196074
-Oppgave 5, 6
-test-programmet fungerer.
 
 Hitomi Schiefloe
 Student nr. s344214
@@ -35,14 +25,22 @@ Student nr. s344214
 #Resultatet av kjøring av testprogrammet
 Oppgave 1, 2, 3, 4, 5, 6 (Det fungerer)
 
-Oppgave 7
-
+Oppgave 7 del B fungerer, men del A var ikke helt perfect.
+Feilmeldingen er:
+a) Skal ikke kaste unntak for to tomme tegnstrenger!!
+- Jeg prøvede å kommente ut throw exception, but fungerer ikke likevel.
 
 Oppgave 8
-
-
+Prøvde mange løsninger men ingen fungerte.Noen av forsøkene er 
+lagt i oppgaven men kommentert bort. Det jobbes fortsatt med oppgaven.
+Tanken for å løse det er blant annet, å finne minimum verdi i array a, og 
+legge dens indeks i et nytt array b i posisjon 0. Så loope gjennom interval 
+[0-Min) og (Min-a.lengde] av a for å finne neste minimum verdi og legge det i det b[1],
+og fortsette på samme måte til man har funnet alle minimum verier i a og lagt 
+alle indekser i array b som til slutt returneres av metoden indekssortering.
 Oppgave 9
-
+Den ble delvis løst, koden er kjørbar men er ikke fullstendig 
+fordi oppgaven er avhengig av oppgave 8 som ikke er løst ennå. 
 
 Oppgave 10
 --Fail--
