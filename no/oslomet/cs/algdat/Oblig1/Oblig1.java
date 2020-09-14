@@ -408,32 +408,24 @@ public class Oblig1 {
     ///// Oppgave 9 //////////////////////////////////////
     public static int[] tredjeMin(int[] a) {
 
-        int n = a.length;     // tabellens lengde
-        if (n < 3)     // må ha minst tre verdier
+        int n = a.length;
+        if (n < 3)
         {
             throw new NoSuchElementException("Tabellen må ha minst tre elementer");
 
         }
         int [] index = indekssortering(new int[] {a[0], a[1], a[2]});
 
-      // throw new UnsupportedOperationException(
+        int m = index[0];
+        int nm = index[1];
+        int tm = index[2];
 
 
 
 
-        
-        int m = index[0];     // m er posisjonen til minst verdi
-        int nm = index[1];    // nm er posisjonen til nest minst verdi
-        int tm = index[2];    // tm er posisjonen til tredje minst verdi
-
-        // vi bytter om slik at når vi starter er m posisjonen til
-        // den minste av de tre første, nm er posisjonen til den nest
-        // minste og tm posisjonen til den tredje minste av de tre første
-
-
-        int minverdi = a[m];                // minste verdi
-        int nestminverdi = a[nm];           // nest minste verdi
-        int tredjeminverdi = a[tm];         // tredje minste verdi
+        int minverdi = a[m];
+        int nestminverdi = a[nm];
+        int tredjeminverdi = a[tm];
 
         for (int i = 3; i < a.length; i++)
         {
@@ -454,7 +446,7 @@ public class Oblig1 {
                         m = i;
                         minverdi = verdi;
                     }
-                    else  // verdi <= minverdi && verdi > nestminverdi
+                    else
                     {
                         tm = nm;
                         tredjeminverdi = nestminverdi;
@@ -463,7 +455,7 @@ public class Oblig1 {
                         nestminverdi = verdi;
                     }
                 }
-                else // verdi >= nestminverdi && verdi < tredjeminverdi
+                else
                 {
                     tm = i;
                     tredjeminverdi = verdi;
