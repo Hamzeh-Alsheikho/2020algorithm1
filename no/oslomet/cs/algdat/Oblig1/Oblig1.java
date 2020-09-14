@@ -9,6 +9,7 @@ import java.util.NoSuchElementException;
 
 public class Oblig1 {
     public static void main(String[] args) {
+
     }
 
     private Oblig1() {
@@ -378,12 +379,35 @@ public class Oblig1 {
 
     ///// Oppgave 8 //////////////////////////////////////
     public static int[] indekssortering(int[] a) {
-
-
-        throw new UnsupportedOperationException();
+        int [] indeksliste = new int[a.length];
+        int [] acopy = Arrays.copyOf(a,a.length);
+        for (int i =0; i< acopy.length; i++){
+            int indek = i;
+            int minverdi = acopy[i];
+            for (int j = i+1; j<acopy.length;j++){
+                if (acopy[j]< minverdi){
+                    indek =j;
+                    minverdi = acopy[j];
+                }
+            }
+            int temp = acopy[i];
+            acopy[i]=acopy[indek];
+            acopy[indek] = temp;
+        }
+        for (int i = 0;i< a.length; i++){
+            int verdi = a[i];
+            for (int j= 0;j< acopy.length;j++){
+                if (acopy[j]==verdi){
+                    indeksliste[j]=i;
+                }
+            }
+        }
+        return indeksliste;
     }
+
     ///// Oppgave 9 //////////////////////////////////////
     public static int[] tredjeMin(int[] a) {
+
        // throw new UnsupportedOperationException();
 
         int n = a.length;     // tabellens lengde
