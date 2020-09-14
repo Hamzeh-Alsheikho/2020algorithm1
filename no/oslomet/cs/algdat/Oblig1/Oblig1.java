@@ -408,24 +408,29 @@ public class Oblig1 {
     ///// Oppgave 9 //////////////////////////////////////
     public static int[] tredjeMin(int[] a) {
 
-       // throw new UnsupportedOperationException();
-
         int n = a.length;     // tabellens lengde
-
-        if (n < 3)     // må ha minst tre verdier
+        if (n > 3)     // må ha minst tre verdier
         {
-            throw new IllegalArgumentException("Lengden til tabellen(" + n + ") er < 3!");
-        }
+            throw new NoSuchElementException("Tabellen må ha minst tre elementer");
 
-        int m = 0;     // m er posisjonen til minst verdi
-        int nm = 1;    // nm er posisjonen til nest minst verdi
-        int tm = 2;    // tm er posisjonen til tredje minst verdi
+        }
+        int [] index = indekssortering(new int[] {a[0], a[1], a[2]});
+
+      // throw new UnsupportedOperationException(
+
+
+
+
+        
+        int m = index[0];     // m er posisjonen til minst verdi
+        int nm = index[1];    // nm er posisjonen til nest minst verdi
+        int tm = index[2];    // tm er posisjonen til tredje minst verdi
 
         // vi bytter om slik at når vi starter er m posisjonen til
         // den minste av de tre første, nm er posisjonen til den nest
         // minste og tm posisjonen til den tredje minste av de tre første
 
-        if (a[nm] > a[m])
+   /*     if (a[nm] > a[m])
         {
             m = 0;
             nm = 1;
@@ -443,13 +448,13 @@ public class Oblig1 {
             int temp = tm;   //tredje minst legges over til temp
             tm = nm;         // så tredjeminst tar plassen til nest minst
             nm = temp;
-        }
+        }*/
 
         int minverdi = a[m];                // minste verdi
         int nestminverdi = a[nm];           // nest minste verdi
         int tredjeminverdi = a[tm];         // tredje minste verdi
 
-        for (int i = 3; i < n; i++)
+        for (int i = 3; i < a.length; i++)
         {
             int verdi = a[i];
 
