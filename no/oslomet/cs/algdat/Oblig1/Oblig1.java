@@ -409,7 +409,7 @@ public class Oblig1 {
     public static int[] tredjeMin(int[] a) {
 
         int n = a.length;     // tabellens lengde
-        if (n > 3)     // må ha minst tre verdier
+        if (n < 3)     // må ha minst tre verdier
         {
             throw new NoSuchElementException("Tabellen må ha minst tre elementer");
 
@@ -430,25 +430,6 @@ public class Oblig1 {
         // den minste av de tre første, nm er posisjonen til den nest
         // minste og tm posisjonen til den tredje minste av de tre første
 
-   /*     if (a[nm] > a[m])
-        {
-            m = 0;
-            nm = 1;
-        }
-
-        if (a[tm] < a[m])   //hvis tredje minst er mindre en minst
-        {
-            int temp = tm;  //legger verdien til tredjeminst over temporary variabel
-            tm = m;         //tredje minst flytes til minst plassen
-            m = temp;        // minst blir temporary
-        }
-
-        if (a[tm] < a[nm])  //hvis tredje minst er mindre enn nest minst
-        {
-            int temp = tm;   //tredje minst legges over til temp
-            tm = nm;         // så tredjeminst tar plassen til nest minst
-            nm = temp;
-        }*/
 
         int minverdi = a[m];                // minste verdi
         int nestminverdi = a[nm];           // nest minste verdi
