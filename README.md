@@ -38,6 +38,7 @@ legge dens indeks i et nytt array b i posisjon 0. Så loope gjennom interval
 [0-Min) og (Min-a.lengde] av a for å finne neste minimum verdi og legge det i det b[1],
 og fortsette på samme måte til man har funnet alle minimum verier i a og lagt 
 alle indekser i array b som til slutt returneres av metoden indekssortering.
+
 Oppgave 9
 Den ble delvis løst, koden er kjørbar men er ikke fullstendig 
 fordi oppgaven er avhengig av oppgave 8 som ikke er løst ennå. 
