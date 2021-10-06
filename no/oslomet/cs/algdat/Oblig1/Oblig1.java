@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-public class Oblig1 {
+public class  Oblig1 {
     public static void main(String[] args) {
 
     }
@@ -419,9 +419,6 @@ public class Oblig1 {
         int m = index[0];
         int nm = index[1];
         int tm = index[2];
-
-
-
 
         int minverdi = a[m];
         int nestminverdi = a[nm];
